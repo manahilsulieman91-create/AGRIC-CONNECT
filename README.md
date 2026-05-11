@@ -36,7 +36,7 @@ PRICE-CALCULATOR → Contains `price.html` and `price.css`.
 
 1. Clone the repository:
    bash
-   git clone https://github.com/manahilsulieman91-create/demo.git
+   git clone https://github.com/manahilsulieman91-create/AGRIC-CONNECT.git
 
 2. Switch to the desired branch:
    bash
@@ -64,8 +64,9 @@ Contributions are welcome!
 
 This project is licensed under the MIT License.  
 You are free to use, modify, and distribute this code with proper attribution.
-
  👩‍💻 Author
 
-Developed by Manahil Al-Jundi Sulieman 
-GitHub: manahilsulieman91-create [(github.com in Bing)](https://www.bing.com/search?q="https%3A%2F%2Fgithub.com%2Fmanahilsulieman91-create")
+Developed by Manahil Al‑Jundi Sulieman  
+GitHub: manahilsulieman91-create [(github.com in Bing)](https://www.bing.com/search?q="https%3A%2F%2Fgithub.com%2Fmanahilsulieman91-create")  
+Repository: [AGRIC-CONNECT](https://github.com/manahilsulieman91-create/AGRIC-CONNECT.git)
+
