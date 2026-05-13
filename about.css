@@ -1,0 +1,32 @@
+/* --- ABOUT PAGE SPECIFIC STYLES --- */
+.focus-item {
+    padding: 30px;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.focus-item:hover {
+    transform: translateY(-5px);
+    background: var(--bg-light);
+}
+
+.focus-item h4 {
+    color: var(--agri-dark);
+    margin: 15px 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.focus-item p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- TRUST HIGHLIGHTS --- */
+.kyc-step {
+    border-left: 4px solid var(--agri-teal);
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
