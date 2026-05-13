@@ -4,23 +4,36 @@
     <meta charset="UTF-8">
     <title>Marketplace | Agric Connect</title>
     <link rel="stylesheet" href="marketplace.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">AGRIC<span>CONNECT</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="market.html" class="active">Market</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="price.html">Price Calculator</a></li>
-            <li><a href="farmers.html">Sellers</a></li>
-            <li><a href="contact.html">Join Us</a></li>
-        </ul>
-    </nav>
-
+    <a href="index.html" class="logo">AGRIC<span>CONNECT</span></a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="marketplace.html">Market</a></li>
+        <li><a href="price.html">Price Calculator</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">About Us ▼</a>
+            <div class="dropdown-content">
+                <a href="about.html">Our Company</a>
+                <a href="our team.html">Our Team</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+    </ul>
+</nav>
+  
     <header class="hero" style="height: 40vh;">
         <h1>Global Commodity Exchange</h1>
-        <p>Verified Industrial Grade Produce from East African Soil</p>
+        <p>Verified Industrial Grade Produce from
+    </section>
+   
+    </body>
+</html> East African Soil</p>
     </header>
 
     <section class="market-section">
@@ -138,8 +151,7 @@
                 <a href="contact.html" class="bid-btn">Place Bid</a>
             </div>
         </div>
-    </section>
-    <footer>
+          <footer>
     <div class="footer-grid">
         <div class="footer-brand">
             <h2>AGRIC<span>CONNECT</span></h2>
@@ -176,6 +188,3 @@
         &copy; 2026 Akatale ko Agribusiness Platform. All Rights Reserved.
     </div>
 </footer>
-
-    </body>
-</html>
