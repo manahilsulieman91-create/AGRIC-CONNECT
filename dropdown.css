@@ -1,0 +1,59 @@
+/* dropdown.css - For About Us dropdown menu */
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 8px;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: #1a3c2c;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Active page styling */
+.dropdown-content a.active {
+    background-color: #2e7d32;
+    color: white;
+}
+
+/* Optional: Add a subtle arrow animation */
+.dropdown .dropbtn:hover {
+    color: #2e7d32;
+}
