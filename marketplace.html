@@ -3,188 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <title>Marketplace | Agric Connect</title>
-    <link rel="stylesheet" href="marketplace.css">
-    <link rel="stylesheet" href="dropdown.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="marketplace.css">
 </head>
 <body>
+
     <nav>
-    <a href="index.html" class="logo">AGRIC<span>CONNECT</span></a>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="marketplace.html">Market</a></li>
-        <li><a href="price.html">Price Calculator</a></li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">About Us ▼</a>
-            <div class="dropdown-content">
-                <a href="about.html">Our Company</a>
-                <a href="our team.html">Our Team</a>
-                <a href="faq.html">FAQ</a>
-            </div>
-        </li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
-    </ul>
-</nav>
-  
-    <header class="hero" style="height: 40vh;">
+        <a href="index.html" class="logo">AGRIC<span>CONNECT</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="marketplace.html" class="active">Market</a></li>
+            <li><a href="price.html">Price Calculator</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">About Us ▼</a>
+                <div class="dropdown-content">
+                    <a href="about.html">Our Company</a>
+                    <a href="our-team.html">Our Team</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <header class="marketplace-header">
         <h1>Global Commodity Exchange</h1>
-        <p>Verified Industrial Grade Produce from
-    </section>
-   
-    </body>
-</html> East African Soil</p>
+        <p>Verified Industrial Grade Produce from East African Soil</p>
     </header>
 
-    <section class="market-section">
-        <input type="radio" name="commodity" id="all" checked>
-        <input type="radio" name="commodity" id="grain">
-        <input type="radio" name="commodity" id="fruit">
-        <input type="radio" name="commodity" id="other">
-
-        <div class="filter-tabs">
-            <label for="all" class="tab-btn">All Commodities</label>
-            <label for="grain" class="tab-btn">Grains</label>
-            <label for="fruit" class="tab-btn">Fresh Fruits</label>
-            <label for="other" class="tab-btn">Other Agri-Goods</label>
-        </div>
-
-        <div class="market-grid">
-            <div class="card grain">
-                <img src="images/rice.png" alt="Rice">
-                <span class="badge">Grain</span>
-                <h3>Basmati Rice</h3>
-                <p>Upland Variety | UGX 3,500/kg</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-            <div class="card grain">
-                <img src="images/wheat.png" alt="Wheat">
-                <span class="badge">Grain</span>
-                <h3>Hard Winter Wheat</h3>
-                <p>Bulk Export | UGX 2,800/kg</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-            <div class="card grain">
-                <img src="images/millet.png" alt="Millet">
-                <span class="badge">Grain</span>
-                <h3>Pearl Millet</h3>
-                <p>Finger Variant | UGX 1,800/kg</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-            <div class="card grain">
-                <img src="images/sorghum.png" alt="Sorghum">
-                <span class="badge">Grain</span>
-                <h3>Red Sorghum</h3>
-                <p>Brewery Grade | UGX 1,100/kg</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-            <div class="card grain">
-                <img src="images/barley.png" alt="Barley">
-                <span class="badge">Grain</span>
-                <h3>Malt Barley</h3>
-                <p>Industrial Standard | UGX 2,200/kg</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-            <div class="card grain">
-                <img src="images/corn.png" alt="Corn">
-                <span class="badge">Grain</span>
-                <h3>Yellow Corn</h3>
-                <p>Grade 1 | UGX 1,200/kg</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-
-            <div class="card fruit">
-                <img src="images/corn.png" alt="Pineapple">
-                <span class="badge">Fruit</span>
-                <h3>Queen Pineapples</h3>
-                <p>Luwero Origin | UGX 4,000/pc</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-            <div class="card fruit">
-                <img src="images/mangoes.png" alt="Mango">
-                <span class="badge">Fruit</span>
-                <h3>Kent Mangoes</h3>
-                <p>Masindi Region | UGX 2,500/kg</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-            <div class="card fruit">
-                <img src="images/banana.png" alt="Banana">
-                <span class="badge">Fruit</span>
-                <h3>Bogoya Bananas</h3>
-                <p>Premium Pack | UGX 15,000/bunch</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-            <div class="card fruit">
-                <img src="images/passion fruit.png" alt="Passion">
-                <span class="badge">Fruit</span>
-                <h3>Purple Passion</h3>
-                <p>Organic | UGX 5,000/kg</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-            <div class="card fruit">
-                <img src="images/melon.png" alt="Watermelon">
-                <span class="badge">Fruit</span>
-                <h3>Seedless Melon</h3>
-                <p>Garden Fresh | UGX 6,000/pc</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-            <div class="card fruit">
-                <img src="images/avocado.png" alt="Avocado">
-                <span class="badge">Fruit</span>
-                <h3>Hass Avocados</h3>
-                <p>Export Quality | UGX 2,000/pc</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-
-            <div class="card other">
-                <img src="images/coffee.png" alt="Coffee">
-                <span class="badge" style="background:#6F4E37;">Other</span>
-                <h3>Arabica Coffee</h3>
-                <p>Green Beans | UGX 12,000/kg</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-            <div class="card other">
-                <img src="data:image/jpeg;base64,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" alt="Oil">
-                <span class="badge" style="background:#00bcd4;">Other</span>
-                <h3>Olive Oil</h3>
-                <p>Extra Virgin | UGX 45,000/L</p>
-                <a href="contact.html" class="bid-btn">Place Bid</a>
-            </div>
-        </div>
-          <footer>
-    <div class="footer-grid">
-        <div class="footer-brand">
-            <h2>AGRIC<span>CONNECT</span></h2>
-            <p>Connecting Ugandan smallholder farmers directly to industrial processors to ensure fair trade and zero post-harvest loss.</p>
-        </div>
-
-        <div class="footer-links">
-            <h4>Marketplace</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="marketplace.html">Commodities</a></li>
-                <li><a href="farmers.html">Verified Sellers</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-links">
-            <h4>Resources</h4>
-            <ul>
-                <li><a href="about.html">Our Story</a></li>
-                <li><a href="price.html">Price Calculator</a></li>
-                <li><a href="contact.html">Register Business</a></li>
-            </ul>
-        </div>
-    
-        <div class="footer-contact">
-            <h4>Get in Touch</h4>
-            <p>📍 Plot 24, Nakasero Lane, Kampala</p>
-            <p>📞 +256 700 000000 (WhatsApp)</p>
-            <p>✉️ info@akatale.co.ug</p>
+    <div class="search-section">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search products or farmers...">
+            <button id="searchBtn">Search</button>
         </div>
     </div>
 
-    <div class="footer-bottom">
-        &copy; 2026 Akatale ko Agribusiness Platform. All Rights Reserved.
+    <div class="marketplace-layout">
+        <aside class="categories-sidebar">
+            <h3>Categories</h3>
+            <ul class="category-list">
+                <li><a href="#" data-category="all" class="active">All <span class="count">32</span></a></li>
+                <li><a href="#" data-category="grain">Grains <span class="count">6</span></a></li>
+                <li><a href="#" data-category="fruit">Fresh Fruits <span class="count">11</span></a></li>
+                <li><a href="#" data-category="vegetable">Vegetables <span class="count">13</span></a></li>
+                <li><a href="#" data-category="other">Other Agri-Goods <span class="count">2</span></a></li>
+            </ul>
+        </aside>
+
+        <div class="products-section">
+            <div class="products-header">
+                <div class="result-count"><span id="productCount">30</span> products found</div>
+                <select id="sortSelect">
+                    <option value="default">Sort by: Default</option>
+                    <option value="price-low">Sort by: Price (Low to High)</option>
+                    <option value="price-high">Sort by: Price (High to Low)</option>
+                    <option value="name">Sort by: Name A-Z</option>
+                </select>
+            </div>
+
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
     </div>
-</footer>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>AGRIC<span>CONNECT</span></h2>
+                <p>Connecting Ugandan smallholder farmers directly to industrial processors to ensure fair trade and zero post-harvest loss.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Marketplace</h4>
+                <ul><li><a href="index.html">Home</a></li><li><a href="marketplace.html">Commodities</a></li><li><a href="farmers.html">Verified Sellers</a></li></ul>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul><li><a href="about.html">Our Story</a></li><li><a href="price.html">Price Calculator</a></li><li><a href="contact.html">Register Business</a></li></ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <p>📍 Kampala, Uganda</p>
+                <p>📞 +256 700 000000</p>
+                <p>✉️ info@agricconnect.co.ug</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Agric Connect. All Rights Reserved.</div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="marketplace.js"></script>
+</body>
+</html>
