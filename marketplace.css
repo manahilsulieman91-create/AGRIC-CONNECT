@@ -1,7 +1,9 @@
+/* marketplace.css - Complete styles for all marketplace pages */
+
 /* 1. PROFESSIONAL AGRI-TECH PALETTE */
 :root {
-    --agri-dark: #0a3d1d; /* Deep Forest Green */
-    --agri-teal: #00bcd4; /* High-tech Cyan Accent */
+    --agri-dark: #0a3d1d;
+    --agri-teal: #00bcd4;
     --agri-gradient: linear-gradient(135deg, #0a3d1d 0%, #1b5e20 100%);
     --accent-gradient: linear-gradient(135deg, #00bcd4 0%, #00acc1 100%);
     --bg-light: #f8f9fa;
@@ -10,10 +12,20 @@
     --shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-body { background-color: var(--bg-light); color: var(--text); line-height: 1.6; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
 
-/* 2. NAVIGATION (CONSISTENT ON ALL PAGES) */
+body {
+    background-color: var(--bg-light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* 2. NAVIGATION */
 nav {
     background: var(--white);
     padding: 1.2rem 8%;
@@ -26,158 +38,322 @@ nav {
     box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
-.logo { font-weight: 900; font-size: 1.6rem; color: var(--agri-dark); text-decoration: none; letter-spacing: -1px; }
-.logo span { color: var(--agri-teal); }
-
-.nav-links { display: flex; list-style: none; gap: 30px; }
-.nav-links a { 
-    color: var(--text); 
-    text-decoration: none; 
-    font-weight: 600; 
-    font-size: 0.85rem; 
-    text-transform: uppercase; 
-    transition: 0.3s; 
+.logo {
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: var(--agri-dark);
+    text-decoration: none;
+    letter-spacing: -1px;
 }
-.nav-links a:hover,.nav-links a.active { color: var(--agri-teal); }
 
-/* 3. HERO & BUTTONS */
-.hero {
-    background: linear-gradient(rgba(10, 61, 29, 0.85), rgba(10, 61, 29, 0.85)), url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=1600') center/cover;
-    height: 60vh;
+.logo span {
+    color: var(--agri-teal);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--agri-teal);
+}
+
+/* 3. MARKETPLACE HEADER */
+.marketplace-header {
+    background: linear-gradient(135deg, #1a3c2c 0%, #2e7d32 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: var(--white);
-    padding: 0 15%;
 }
 
-.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.1; }
-.btn {
-    background: var(--accent-gradient);
-    padding: 15px 40px;
-    border-radius: 4px;
-    color: var(--white);
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: 0.3s;
-}
-.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 188, 212, 0.3); }
-
-/* 4. BENTO GRID LAYOUT [1, 2, 3] */
-.bento-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 280px);
-    gap: 20px;
-    padding: 80px 8%;
+.marketplace-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
 }
 
-.bento-item { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); position: relative; }
-.bento-main { grid-column: span 2; grid-row: span 2; padding: 50px; background: var(--agri-gradient); color: white; }
-.bento-item img { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; }
-/* --- MARKET LAYOUT & 3-COLUMN GRID --- */
-.market-section { padding: 60px 8%; }
-
-.market-grid {
-    display: grid;
-    /* This creates exactly 3 columns per line */
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px;
+.marketplace-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
-/* Responsive adjustment: 2 columns on tablets, 1 on phones */
-@media (max-width: 1024px) {.market-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) {.market-grid { grid-template-columns: 1fr; } }
+/* 4. SEARCH SECTION */
+.search-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
 
-/* --- FILTER LOGIC (THE "RADIO HACK")  --- */
-input[type="radio"] { display: none; } /* Hide the physical dots */
-
-/* When Grains is checked, hide everything that is NOT a grain */
-#grain:checked ~.market-grid.card:not(.grain) { display: none; }
-
-/* When Fruit is checked, hide everything that is NOT fruit */
-#fruit:checked ~.market-grid.card:not(.fruit) { display: none; }
-
-/* When Other is checked, hide everything that is NOT other */
-#other:checked ~.market-grid.card:not(.other) { display: none; }
-
-/* --- TABS STYLING --- */
-.filter-tabs {
+.search-container {
     display: flex;
-    justify-content: center;
     gap: 15px;
-    margin-bottom: 50px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.tab-btn {
-    padding: 12px 25px;
-    border: 2px solid var(--agri-dark);
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    color: var(--agri-dark);
-    transition: 0.3s;
-}
-
-/* Active Tab Highlight */
-#all:checked ~.filter-tabs label[for="all"],
-#grain:checked ~.filter-tabs label[for="grain"],
-#fruit:checked ~.filter-tabs label[for="fruit"],
-#other:checked ~.filter-tabs label[for="other"] {
-    background: var(--agri-dark);
-    color: white;
-}
-
-/* --- CARD DESIGN --- */
-.card {
-    background: white;
+.search-container input {
+    flex: 1;
+    padding: 14px 20px;
+    border: 2px solid #e0e0e0;
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    border: 1px solid #eee;
-    transition: 0.3s;
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
-.card img {
-    width: 100%;
-    height: 220px; /* Fixed height for uniformity */
-    object-fit: cover; /* Ensures images don't stretch */
+.search-container input:focus {
+    outline: none;
+    border-color: #2e7d32;
 }
 
-.badge {
-    display: inline-block;
-    background: var(--agri-teal);
+.search-container button {
+    padding: 14px 28px;
+    background: #2e7d32;
     color: white;
-    padding: 4px 10px;
-    font-size: 0.7rem;
-    font-weight: 800;
-    margin: 15px 20px 0;
-    border-radius: 4px;
-    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
 }
 
-.card h3 { padding: 10px 20px 5px; color: var(--agri-dark); }
-.card p { padding: 0 20px 20px; color: #666; font-size: 0.9rem; }
+.search-container button:hover {
+    background: #1a3c2c;
+}
+
+/* 5. MAIN MARKETPLACE LAYOUT */
+.marketplace-layout {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+/* 6. CATEGORIES SIDEBAR */
+.categories-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.categories-sidebar h3 {
+    color: #1a3c2c;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2e7d32;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+}
+
+.category-list li {
+    margin-bottom: 10px;
+}
+
+.category-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.category-list a:hover {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.category-list a.active {
+    background: #2e7d32;
+    color: white;
+}
+
+.category-list .count {
+    background: #ddd;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+}
+
+.category-list a.active .count {
+    background: white;
+    color: #2e7d32;
+}
+
+/* 7. PRODUCTS SECTION */
+.products-section {
+    flex: 1;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.result-count {
+    color: #666;
+}
+
+.result-count span {
+    font-weight: 700;
+    color: #2e7d32;
+    font-size: 1.2rem;
+}
+
+.products-header select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+/* 8. PRODUCTS GRID */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* 9. PRODUCT CARD */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #2e7d32;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.product-card h3 {
+    color: #1a3c2c;
+    margin: 15px 15px 5px;
+    font-size: 1.1rem;
+}
+
+.product-origin {
+    color: #888;
+    font-size: 0.85rem;
+    margin: 0 15px 8px;
+}
+
+.product-price {
+    color: #2e7d32;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 15px 15px;
+}
 
 .bid-btn {
     display: block;
     text-align: center;
-    background: #f8f9fa;
-    color: var(--agri-teal);
+    background: #1a3c2c;
+    color: white;
     text-decoration: none;
-    padding: 15px;
-    font-weight: bold;
-    border-top: 1px solid #eee;
+    padding: 10px;
+    margin: 0 15px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
 }
 
-.bid-btn:hover { background: var(--agri-teal); color: white; }
+.bid-btn:hover {
+    background: #2e7d32;
+}
 
+.no-results {
+    text-align: center;
+    padding: 60px;
+    color: #666;
+    grid-column: 1 / -1;
+}
 
+/* 10. CATEGORY NAVIGATION (for separate pages) */
+.category-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.category-btn {
+    padding: 10px 25px;
+    background: #f5f5f5;
+    color: #333;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.category-btn:hover {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.category-btn.active {
+    background: #2e7d32;
+    color: white;
+}
+
+.market-grid-container {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+/* 11. FOOTER */
 footer {
-    background: var(--agri-gradient); /* Uses your forest green gradient */
+    background: var(--agri-gradient);
     color: var(--white);
     padding: 80px 8% 30px;
     margin-top: 80px;
@@ -185,63 +361,69 @@ footer {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr; /* 4 columns for B2B layout */
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
     gap: 40px;
     padding-bottom: 50px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-brand h2 { 
-    font-size: 1.8rem; 
-    margin-bottom: 15px; 
+.footer-brand h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
     letter-spacing: -1px;
 }
 
-.footer-brand h2 span { color: var(--agri-teal); }
+.footer-brand h2 span {
+    color: var(--agri-teal);
+}
 
-.footer-brand p { 
-    opacity: 0.8; 
-    font-size: 0.9rem; 
-    line-height: 1.8; 
+.footer-brand p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+    line-height: 1.8;
     max-width: 300px;
 }
 
-.footer-links h4 { 
-    margin-bottom: 25px; 
-    font-size: 1.1rem; 
-    color: var(--agri-teal); 
+.footer-links h4 {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: var(--agri-teal);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.footer-links ul { list-style: none; }
-
-.footer-links li { margin-bottom: 12px; }
-
-.footer-links a { 
-    color: var(--white); 
-    text-decoration: none; 
-    opacity: 0.7; 
-    transition: 0.3s; 
-    font-size: 0.95rem; 
+.footer-links ul {
+    list-style: none;
 }
 
-.footer-links a:hover { 
-    opacity: 1; 
-    color: var(--agri-teal); 
-    padding-left: 8px; /* Simple micro-interaction  */
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: var(--agri-teal);
+    padding-left: 8px;
 }
 
 .footer-contact h4 {
-    margin-bottom: 25px; 
-    font-size: 1.1rem; 
+    margin-bottom: 25px;
+    font-size: 1.1rem;
     color: var(--agri-teal);
 }
 
-.footer-contact p { 
-    font-size: 0.95rem; 
-    margin-bottom: 15px; 
-    opacity: 0.8; 
+.footer-contact p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
 }
 
 .footer-bottom {
@@ -252,17 +434,90 @@ footer {
     letter-spacing: 0.5px;
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
-@media (max-width: 900px) {
-   .footer-grid {
-        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+/* 12. RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .marketplace-layout {
+        flex-direction: column;
+    }
+    
+    .categories-sidebar {
+        width: 100%;
+    }
+    
+    .category-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .category-list li {
+        margin-bottom: 0;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 600px) {
-   .footer-grid {
-        grid-template-columns: 1fr; /* 1 column on phones */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .search-container {
+        flex-direction: column;
+    }
+    
+    .marketplace-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .products-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
         text-align: center;
     }
-   .footer-brand p { margin: 0 auto 20px; }
+    
+    .footer-brand p {
+        margin: 0 auto 20px;
+    }
+    
+    .category-nav {
+        gap: 10px;
+    }
+    
+    .category-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .marketplace-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .product-card h3 {
+        font-size: 1rem;
+    }
+    
+    .product-price {
+        font-size: 1rem;
+    }
 }
