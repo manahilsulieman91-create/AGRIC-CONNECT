@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Commodities | Agric Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="marketplace.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">AGRIC<span>CONNECT</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="marketplace.html" class="active">Market</a></li>
+            <li><a href="price.html">Price Calculator</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">About Us ▼</a>
+                <div class="dropdown-content">
+                    <a href="about.html">Our Company</a>
+                    <a href="our-team.html">Our Team</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <header class="marketplace-header">
+        <h1>All Commodities</h1>
+        <p>Complete collection of agricultural products from East Africa</p>
+    </header>
+
+    <!-- Category Filter Buttons -->
+    <div class="category-nav">
+        <button class="category-btn active" data-category="all">All</button>
+        <button class="category-btn" data-category="grain">Grains</button>
+        <button class="category-btn" data-category="fruit">Fruits</button>
+        <button class="category-btn" data-category="vegetable">Vegetables</button>
+        <button class="category-btn" data-category="other">Other</button>
+    </div>
+
+    <div class="market-grid-container">
+        <div class="products-header">
+            <div class="result-count"><span id="productCount">31</span> products found</div>
+            <select id="sortSelect">
+                <option value="default">Sort by: Default</option>
+                <option value="price-low">Sort by: Price (Low to High)</option>
+                <option value="price-high">Sort by: Price (High to Low)</option>
+                <option value="name">Sort by: Name A-Z</option>
+            </select>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>AGRIC<span>CONNECT</span></h2>
+                <p>Connecting Ugandan smallholder farmers directly to industrial processors to ensure fair trade and zero post-harvest loss.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Marketplace</h4>
+                <ul><li><a href="index.html">Home</a></li><li><a href="marketplace.html">Commodities</a></li><li><a href="farmers.html">Verified Sellers</a></li></ul>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul><li><a href="about.html">Our Story</a></li><li><a href="price.html">Price Calculator</a></li><li><a href="contact.html">Register Business</a></li></ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <p>📍 Kampala, Uganda</p>
+                <p>📞 +256 700 000000</p>
+                <p>✉️ info@agricconnect.co.ug</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Agric Connect. All Rights Reserved.</div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="all-commodities.js"></script>
+    <script src="marketplace.js"></script>
+</body>
+</html>
