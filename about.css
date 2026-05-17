@@ -192,3 +192,316 @@
     max-width: 650px; 
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
+/* about.css - Our Company page styles */
+
+/* Hero Section */
+.hero {
+    height: 50vh;
+    background: linear-gradient(rgba(10, 61, 29, 0.9), rgba(10, 61, 29, 0.9)), url('https://picsum.photos/id/292/1600/900') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 15%;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Main Content */
+.about-main {
+    padding: 80px 8%;
+}
+
+/* Vision & Mission Cards */
+.vision-mission-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.vision-card {
+    padding: 40px;
+    border-left: 8px solid var(--agri-teal);
+}
+
+.mission-card {
+    padding: 40px;
+    border-left: 8px solid var(--agri-dark);
+}
+
+.vision-card h2,
+.mission-card h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.vision-card h2 {
+    color: var(--agri-dark);
+}
+
+.mission-card h2 {
+    color: var(--agri-teal);
+}
+
+.vision-card p,
+.mission-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+/* Strategic Focus Section */
+.strategic-focus {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.strategic-focus h2 {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: var(--agri-dark);
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.focus-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.cat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.focus-item h4 {
+    color: var(--agri-dark);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.focus-item p {
+    color: #fffbfb;
+    font-size: 0.9rem;
+}
+
+/* KYC Section */
+.kyc-section {
+    background: var(--agri-gradient);
+    color: white;
+    padding: 60px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.kyc-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.kyc-content p {
+    opacity: 0.9;
+    margin-bottom: 20px;
+    line-height: 1.6;
+     color: white;
+}
+
+.kyc-btn {
+    background: var(--white);
+    color: var(--agri-dark);
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.kyc-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.kyc-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.step-card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 8px;
+     color: white;
+}
+
+.step-card h5 {
+    color: var(--agri-teal);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.step-card p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    color: #fefbff;
+}
+
+/* Stats Section */
+.stats-section {
+    background: linear-gradient(135deg, #1a3c2c 0%, #2e7d32 100%);
+    padding: 60px 20px;
+    margin: 50px 0;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-card {
+    color: white;
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #00bcd4;
+}
+
+.stat-label {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.stats-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.stats-btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background: #00bcd4;
+    color: #1a3c2c;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.stats-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.stats-btn.secondary {
+    background: transparent;
+    border: 2px solid #00bcd4;
+    color: #00bcd4;
+}
+
+.stats-btn.secondary:hover {
+    background: #00bcd4;
+    color: #1a3c2c;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .vision-mission-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .kyc-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 40vh;
+        padding: 0 20px;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .about-main {
+        padding: 40px 5%;
+    }
+    
+    .strategic-focus h2 {
+        font-size: 1.8rem;
+    }
+    
+    .kyc-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stats-btn {
+        width: 80%;
+        text-align: center;
+    }
+}
