@@ -8,83 +8,82 @@
     <link rel="stylesheet" href="dropdown.css">
 </head>
 <body>
-     <nav>
-    <a href="index.html" class="logo">AGRIC<span>CONNECT</span></a>
-    <ul class="nav-links">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="marketplace.html">MARKET</a></li>
-        <li><a href="price.html">PRICE CALCULATOR</a></li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">ABOUT US ▼</a>
-            <div class="dropdown-content">
-                <a href="about.html">OUR COMPANY</a>
-                <a href="our team.html">OUR TEAM</a>
-                <a href="faq.html">FAQ</a>
-            </div>
-        </li>
-        <li><a href="login.html">LOGIN</a></li>
-        <li><a href="signup.html">SIGN UP</a></li>
-    </ul>
-</nav>
-   
-    <header class="hero" style="height: 50vh; background: linear-gradient(rgba(10, 61, 29, 0.9), rgba(10, 61, 29, 0.9)), url('https://picsum.photos/id/292/1600/900') center/cover;">
+
+    <nav>
+        <a href="index.html" class="logo">AGRIC<span>CONNECT</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="marketplace.html">MARKET</a></li>
+            <li><a href="price.html">PRICE CALCULATOR</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">ABOUT US ▼</a>
+                <div class="dropdown-content">
+                    <a href="about.html">OUR COMPANY</a>
+                    <a href="our team.html">OUR TEAM</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </li>
+            <li><a href="login.html" class="login-btn">LOGIN</a></li>
+            <li><a href="signup.html" class="signup-btn">SIGN UP</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
         <h1>Redistributing Value in <br> the Food Supply Chain</h1>
         <p>A group of experts leveraging technology to create fair agri-trade.</p>
     </header>
 
-    <main style="padding: 80px 8%;">
-        
-        <section style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 100px;">
-            <div class="card" style="padding: 40px; border-left: 8px solid var(--agri-teal);">
-                <h2 style="color: var(--agri-dark); margin-bottom: 20px;">OUR VISION</h2>
-                <p style="font-size: 1.1rem; line-height: 1.8;">To become the largest agricultural fair-trade platform in East Africa, connecting rural smallholder farmers to industrial processors worldwide through transparent digital solutions.</p>
+    <main class="about-main">
+        <!-- Vision & Mission -->
+        <section class="vision-mission-section">
+            <div class="card vision-card">
+                <h2>OUR VISION</h2>
+                <p>To become the largest agricultural fair-trade platform in East Africa, connecting rural smallholder farmers to industrial processors worldwide through transparent digital solutions.</p>
             </div>
-            <div class="card" style="padding: 40px; border-left: 8px solid var(--agri-dark);">
-                <h2 style="color: var(--agri-teal); margin-bottom: 20px;">OUR MISSION</h2>
-                <p style="font-size: 1.1rem; line-height: 1.8;">To become the global reference for digital food crop transactions by providing a complete platform that ensures food traceability, price stability, and zero post-harvest loss.</p>
+            <div class="card mission-card">
+                <h2>OUR MISSION</h2>
+                <p>To become the global reference for digital food crop transactions by providing a complete platform that ensures food traceability, price stability, and zero post-harvest loss.</p>
             </div>
         </section>
-        <!-- Stats Section with Button -->
-<section class="stats-section">
-    <div class="stats-container">
-        <div class="stat-card">
-            <div class="stat-number">5,000+</div>
-            <div class="stat-label">Registered Farmers</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">2,500+</div>
-            <div class="stat-label">Active Buyers</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">50+</div>
-            <div class="stat-label">Countries</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">$25M+</div>
-            <div class="stat-label">Trade Volume</div>
-        </div>
-    </div>
-    
-    <!-- Centered Button -->
-    <div class="stats-button-container">
-        <a href="signup.html" class="stats-btn">🌾 Register as Farmer</a>
-        <a href="contact.html" class="stats-btn secondary">🤝 Join as Buyer</a>
-    </div>
-</section>
-    
 
-        <section style="text-align: center; margin-bottom: 100px;">
-            <h2 style="margin-bottom: 50px; font-size: 2.5rem;">OUR STRATEGIC FOCUS</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-label">Registered Farmers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2,500+</div>
+                    <div class="stat-label">Active Buyers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$25M+</div>
+                    <div class="stat-label">Trade Volume</div>
+                </div>
+            </div>
+            <div class="stats-button-container">
+                <a href="signup.html" class="stats-btn">🌾 Register as Farmer</a>
+                <a href="contact.html" class="stats-btn secondary">🤝 Join as Buyer</a>
+            </div>
+        </section>
+
+        <!-- Strategic Focus -->
+        <section class="strategic-focus">
+            <h2>OUR STRATEGIC FOCUS</h2>
+            <div class="focus-grid">
                 <div class="focus-item">
                     <div class="cat-icon">🚜</div>
-                    <h4>Farming Expertize</h4>
+                    <h4>Farming Expertise</h4>
                     <p>Direct knowledge of field operations and soil health.</p>
                 </div>
                 <div class="focus-item">
                     <div class="cat-icon">🏢</div>
-                    <h4>Procurement</h4>
-                    <h4>Management</h4>
+                    <h4>Procurement Management</h4>
                     <p>Optimizing supply for industrial food manufacturers.</p>
                 </div>
                 <div class="focus-item">
@@ -100,74 +99,67 @@
             </div>
         </section>
 
-        <section style="background: var(--agri-gradient); color: white; padding: 60px; border-radius: 12px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: center;">
-            <div>
-                <h2 style="margin-bottom: 20px;">KNOW YOUR CUSTOMER (KYC)</h2>
-                <p style="opacity: 0.9; margin-bottom: 20px;">We verify every user to maintain a safe and reliable marketplace. Identity verification is the foundation of our trust architecture.</p>
-                <a href="contact.html" class="btn" style="background: var(--white); color: var(--agri-dark);">Get Verified Now</a>
+        <!-- KYC Section -->
+        <section class="kyc-section">
+            <div class="kyc-content">
+                <h2>KNOW YOUR CUSTOMER (KYC)</h2>
+                <p>We verify every user to maintain a safe and reliable marketplace. Identity verification is the foundation of our trust architecture.</p>
+                <a href="contact.html" class="kyc-btn">Get Verified Now</a>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                    <h5 style="color: var(--agri-teal);">Step 01</h5>
-                    <p style="font-size: 0.9rem;">Company Registration Documents Verification</p>
+            <div class="kyc-steps">
+                <div class="step-card">
+                    <h5>Step 01</h5>
+                    <p>Company Registration Documents Verification</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                    <h5 style="color: var(--agri-teal);">Step 02</h5>
-                    <p style="font-size: 0.9rem;">Government ID and Postal Address Proof [1]</p>
+                <div class="step-card">
+                    <h5>Step 02</h5>
+                    <p>Government ID and Postal Address Proof</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                    <h5 style="color: var(--agri-teal);">Step 03</h5>
-                    <p style="font-size: 0.9rem;">Valid Company IBAN / Mobile Money Wallet</p>
+                <div class="step-card">
+                    <h5>Step 03</h5>
+                    <p>Valid Company IBAN / Mobile Money Wallet</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                    <h5 style="color: var(--agri-teal);">Step 04</h5>
-                    <p style="font-size: 0.9rem;">Final Approval for Market-Wide Credibility</p>
+                <div class="step-card">
+                    <h5>Step 04</h5>
+                    <p>Final Approval for Market-Wide Credibility</p>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer>
-        </footer>
-</body>
-</html>
-    <footer>
-    <div class="footer-grid">
-        <div class="footer-brand">
-            <h2>AGRIC<span>CONNECT</span></h2>
-            <p>Connecting Ugandan smallholder farmers directly to industrial processors to ensure fair trade and zero post-harvest loss.</p>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>AGRIC<span>CONNECT</span></h2>
+                <p>Connecting Ugandan smallholder farmers directly to industrial processors to ensure fair trade and zero post-harvest loss.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Marketplace</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html">Commodities</a></li>
+                    <li><a href="farmers.html">Verified Sellers</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="price.html">Price Calculator</a></li>
+                    <li><a href="contact.html">Register Business</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <p>📍 Plot 24, Nakasero Lane, Kampala</p>
+                <p>📞 +256 700 000000 (WhatsApp)</p>
+                <p>✉️ info@akatale.co.ug</p>
+            </div>
         </div>
-
-        <div class="footer-links">
-            <h4>Marketplace</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="marketplace.html">Commodities</a></li>
-                <li><a href="farmers.html">Verified Sellers</a></li>
-            </ul>
+        <div class="footer-bottom">
+            &copy; 2026 Akatale ko Agribusiness Platform. All Rights Reserved.
         </div>
+    </footer>
 
-        <div class="footer-links">
-            <h4>Resources</h4>
-            <ul>
-                <li><a href="about.html">Our Story</a></li>
-                <li><a href="price.html">Price Calculator</a></li>
-                <li><a href="contact.html">Register Business</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-contact">
-            <h4>Get in Touch</h4>
-            <p>📍 Plot 24, Nakasero Lane, Kampala</p>
-            <p>📞 +256 700 000000 (WhatsApp)</p>
-            <p>✉️ info@akatale.co.ug</p>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        &copy; 2026 Akatale ko Agribusiness Platform. All Rights Reserved.
-    </div>
-</footer>
 </body>
 </html>
