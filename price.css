@@ -1,0 +1,229 @@
+/* price.css - Price Calculator Page Styles */
+
+/* Hero Section */
+.price-hero {
+    background: linear-gradient(135deg, #1a3c2c 0%, #2e7d32 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.price-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.price-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Calculator Container */
+.calculator-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+}
+
+/* Calculator Card */
+.calculator-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.calculator-card h2 {
+    color: #1a3c2c;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.calculator-card > p {
+    color: #666;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+/* Result Box */
+.result-box {
+    background: #e8f5e9;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #333;
+    border-bottom: 1px solid #c8e6c9;
+}
+
+.result-row.total {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a3c2c;
+    border-bottom: none;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 2px solid #c8e6c9;
+}
+
+.result-row.total span:first-child {
+    font-weight: 700;
+}
+
+.result-row.total span:last-child {
+    color: #2e7d32;
+    font-size: 1.4rem;
+}
+
+/* Calculate Button */
+.calculate-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #2e7d32 0%, #1a3c2c 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+}
+
+/* Info Card */
+.info-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.info-card h3 {
+    color: #1a3c2c;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2e7d32;
+}
+
+.insight-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.insight-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.insight-value {
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+.info-card hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .calculator-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 40px auto;
+    }
+    
+    .calculator-card {
+        padding: 25px;
+    }
+    
+    .calculator-card h2 {
+        font-size: 1.5rem;
+    }
+    
+    .price-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .price-hero p {
+        font-size: 0.9rem;
+    }
+    
+    .result-row {
+        font-size: 0.9rem;
+    }
+    
+    .result-row.total {
+        font-size: 1.1rem;
+    }
+    
+    .result-row.total span:last-child {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator-card {
+        padding: 20px;
+    }
+    
+    .form-group select,
+    .form-group input {
+        padding: 10px 12px;
+    }
+    
+    .result-box {
+        padding: 15px;
+    }
+    
+    .insight-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+}

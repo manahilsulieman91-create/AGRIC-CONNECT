@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculator | Agric Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="price.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">AGRIC<span>CONNECT</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="marketplace.html">MARKET</a></li>
+            <li><a href="price.html" class="active">PRICE CALCULATOR</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">ABOUT US ▼</a>
+                <div class="dropdown-content">
+                    <a href="about.html">OUR COMPANY</a>
+                    <a href="our team.html">OUR TEAM</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </li>
+            <li><a href="login.html" class="login-btn">LOGIN</a></li>
+            <li><a href="signup.html" class="signup-btn">SIGN UP</a></li>
+        </ul>
+    </nav>
+
+    <header class="price-hero">
+        <h1>Price Calculator</h1>
+        <p>Calculate your total cost instantly</p>
+    </header>
+
+    <div class="calculator-container">
+        <div class="calculator-card">
+            <h2>Quick Price Estimator</h2>
+            <p>Enter the details below to calculate your total cost</p>
+
+            <div class="form-group">
+                <label>Select Product</label>
+                <select id="productSelect">
+                    <option value="0">Select a product</option>
+                    <option value="3500">Basmati Rice (UGX 3,500/kg)</option>
+                    <option value="2800">Hard Winter Wheat (UGX 2,800/kg)</option>
+                    <option value="1800">Pearl Millet (UGX 1,800/kg)</option>
+                    <option value="1100">Red Sorghum (UGX 1,100/kg)</option>
+                    <option value="2200">Malt Barley (UGX 2,200/kg)</option>
+                    <option value="1200">Yellow Corn (UGX 1,200/kg)</option>
+                    <option value="1000">Sweet Oranges (UGX 1,000/pc)</option>
+                    <option value="8000">Green Grapes (UGX 8,000/kg)</option>
+                    <option value="2000">Guavas (UGX 2,000/kg)</option>
+                    <option value="3000">Pawpaw (UGX 3,000/pc)</option>
+                    <option value="15000">Jackfruit (UGX 15,000/pc)</option>
+                    <option value="4000">Pineapples (UGX 4,000/pc)</option>
+                    <option value="2500">Mangoes (UGX 2,500/kg)</option>
+                    <option value="15000">Bananas (UGX 15,000/bunch)</option>
+                    <option value="2500">Fresh Tomatoes (UGX 2,500/kg)</option>
+                    <option value="3000">Red Cabbage (UGX 3,000/kg)</option>
+                    <option value="2000">Carrots (UGX 2,000/kg)</option>
+                    <option value="1500">Red Onions (UGX 1,500/kg)</option>
+                    <option value="1800">White Onions (UGX 1,800/kg)</option>
+                    <option value="2000">Green Cabbage (UGX 2,000/kg)</option>
+                    <option value="4000">Green Capsicum (UGX 4,000/kg)</option>
+                    <option value="5000">Yellow Capsicum (UGX 5,000/kg)</option>
+                    <option value="2000">Cucumber (UGX 2,000/pc)</option>
+                    <option value="3000">Eggplant (UGX 3,000/kg)</option>
+                    <option value="500">Lemons (UGX 500/pc)</option>
+                    <option value="8000">Chili Peppers (UGX 8,000/kg)</option>
+                    <option value="12000">Arabica Coffee (UGX 12,000/kg)</option>
+                    <option value="45000">Olive Oil (UGX 45,000/L)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Quantity</label>
+                <input type="number" id="quantity" placeholder="Enter quantity" value="1" min="1">
+            </div>
+
+            <div class="form-group">
+                <label>Unit</label>
+                <select id="unit">
+                    <option value="kg">Kilograms (kg)</option>
+                    <option value="pc">Pieces (pc)</option>
+                    <option value="bunch">Bunch</option>
+                    <option value="L">Litres (L)</option>
+                </select>
+            </div>
+
+            <div class="result-box">
+                <div class="result-row">
+                    <span>Price per unit:</span>
+                    <span id="pricePerUnit">UGX 0</span>
+                </div>
+                <div class="result-row">
+                    <span>Quantity:</span>
+                    <span id="quantityDisplay">0</span>
+                </div>
+                <div class="result-row total">
+                    <span>Total Cost:</span>
+                    <span id="totalCost">UGX 0</span>
+                </div>
+            </div>
+
+            <button class="calculate-btn" onclick="calculatePrice()">Calculate Now</button>
+        </div>
+
+        <div class="info-card">
+            <h3>Market Insights</h3>
+            <div class="insight-item">
+                <span class="insight-label">Average Price Trend:</span>
+                <span class="insight-value">↑ +5.2% this month</span>
+            </div>
+            <div class="insight-item">
+                <span class="insight-label">Best Selling:</span>
+                <span class="insight-value">Maize, Rice, Beans</span>
+            </div>
+            <div class="insight-item">
+                <span class="insight-label">Transport Cost:</span>
+                <span class="insight-value">UGX 500/km</span>
+            </div>
+            <div class="insight-item">
+                <span class="insight-label">Market Demand:</span>
+                <span class="insight-value">High</span>
+            </div>
+            <hr>
+            <div class="insight-item">
+                <span class="insight-label">Bulk Discount:</span>
+                <span class="insight-value">5% off above 100kg</span>
+            </div>
+            <div class="insight-item">
+                <span class="insight-label">Estimated Delivery:</span>
+                <span class="insight-value">2-3 days</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>AGRIC<span>CONNECT</span></h2>
+                <p>Connecting Ugandan smallholder farmers directly to industrial processors to ensure fair trade and zero post-harvest loss.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Marketplace</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html">Commodities</a></li>
+                    <li><a href="farmers.html">Verified Sellers</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="price.html">Price Calculator</a></li>
+                    <li><a href="contact.html">Register Business</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <p>📍 Kampala, Uganda</p>
+                <p>📞 +256 700 000000</p>
+                <p>✉️ info@agricconnect.co.ug</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Agric Connect. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+        function calculatePrice() {
+            const productSelect = document.getElementById('productSelect');
+            const quantity = document.getElementById('quantity').value;
+            const unit = document.getElementById('unit').value;
+            
+            const price = parseFloat(productSelect.value);
+            const qty = parseFloat(quantity);
+            
+            if (price === 0 || isNaN(price)) {
+                alert('Please select a product');
+                return;
+            }
+            
+            if (isNaN(qty) || qty <= 0) {
+                alert('Please enter a valid quantity');
+                return;
+            }
+            
+            const total = price * qty;
+            
+            // Get the selected product name
+            const selectedOption = productSelect.options[productSelect.selectedIndex];
+            const productName = selectedOption.text;
+            
+            document.getElementById('pricePerUnit').innerHTML = `UGX ${price.toLocaleString()}/${unit}`;
+            document.getElementById('quantityDisplay').innerHTML = `${qty} ${unit}`;
+            document.getElementById('totalCost').innerHTML = `UGX ${total.toLocaleString()}`;
+        }
+        
+        // Auto-calculate when quantity changes
+        document.getElementById('quantity').addEventListener('input', calculatePrice);
+        document.getElementById('productSelect').addEventListener('change', calculatePrice);
+        document.getElementById('unit').addEventListener('change', calculatePrice);
+        
+        // Initial calculation
+        calculatePrice();
+    </script>
+</body>
+</html>
